@@ -56,4 +56,6 @@ This work is supported by the [DIANA/HEP project](http://diana-hep.org/), which 
   - [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html): Project advisor
   - [Stephen Sekula](http://www.physics.smu.edu/sekula/): Matthew's research advisor
 
+- Many thanks to [Lukas Heinrich](https://github.com/lukasheinrich) and [Alaettin Serhan Mete](https://www.linkedin.com/in/alaettin-serhan-mete-ph-d-340b9288/) for insightful discussions.
+
 - All badges made by [shields.io](http://shields.io/)
