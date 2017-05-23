@@ -1,8 +1,6 @@
 # DIANA/HEP Fellowship for Matthew Feickert (Project Name is work in progress: DFGMark?)
 
-<!-- Temp link until in GitHub -->
-
- [![license](https://img.shields.io/github/license/matthewfeickert/HEP-ML-Resources.svg)]()
+[![license](https://img.shields.io/github/license/matthewfeickert/fellowship-project.svg)]() [![nbviewer](https://img.shields.io/badge/view%20on-nbviewer-brightgreen.svg)](http://nbviewer.jupyter.org/github/matthewfeickert/fellowship-project/tree/master/Notebooks/)
 
 There are examples of how to use the tool in the form of Jupyter notebooks in the `Notebooks` directory.
 
@@ -12,7 +10,8 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
   - [x] Create a GitHub repository for the project.
   - [ ] Design a template for binned models that is parametrized in terms of number of events, number of bins, number of channels, number of signal/background components, and number of parameters of interest and nuisance parameters.
-  - [ ] Begin documentation of the template model on the GitHub repository.
+  - [x] Begin documentation of the template model on the GitHub repository.
+    - See `Notebooks` directory
 
 - May 22nd through June 4th
 
