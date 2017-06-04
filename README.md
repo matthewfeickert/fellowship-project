@@ -6,7 +6,7 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
 ## Project Timeline
 
-- **May 8th through May 21st**
+- May 8th through May 21st
 
   - [x] Create a GitHub repository for the project.
   - [ ] Design a template for binned models that is parametrized in terms of number of events, number of bins, number of channels, number of signal/background components, and number of parameters of interest and nuisance parameters.
@@ -16,10 +16,11 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 - May 22nd through June 4th
 
   - [ ] Establish a precise mathematical formulation that is implementation-independent based on the `HistFactory` schema.
-  - [ ] Begin study of data flow graph frameworks or of probabilistic programming frameworks.
+  - [x] Begin study of data flow graph frameworks or of probabilistic programming frameworks.
+    - Studying `TensorFlow`
   - [ ] Implement the template for the benchmark models with a `HistFactory` script.
 
-- June 5th through June 18th
+- **June 5th through June 18th**
 
   - [ ] Conclude from study of data flow graph frameworks or of probabilistic programming frameworks which framework to pursue.
   - [ ] Begin implementation of the benchmark models in the selected framework.
