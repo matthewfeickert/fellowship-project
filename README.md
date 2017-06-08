@@ -47,7 +47,7 @@ Primary Author: [Matthew Feickert](http://www.matthewfeickert.com/)
 
 ## Acknowledgments
 
-This work is supported by the [DIANA/HEP project](http://diana-hep.org/), which if funded solely by the National Science Foundation.
+This work is supported by the [DIANA/HEP project](http://diana-hep.org/), which if funded solely by the National Science Foundation ([NSF ACI-1450310](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450310)).
 
 - Project mentors and advisors:
 
@@ -56,6 +56,6 @@ This work is supported by the [DIANA/HEP project](http://diana-hep.org/), which 
   - [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html): Project advisor
   - [Stephen Sekula](http://www.physics.smu.edu/sekula/): Matthew's research advisor
 
-- Many thanks to [Lukas Heinrich](https://github.com/lukasheinrich) and [Alaettin Serhan Mete](https://www.linkedin.com/in/alaettin-serhan-mete-ph-d-340b9288/) for insightful discussions.
+- Many thanks to [Lukas Heinrich](https://github.com/lukasheinrich) for insightful discussions.
 
 - All badges made by [shields.io](http://shields.io/)
