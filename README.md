@@ -1,6 +1,6 @@
 # DIANA/HEP Fellowship for Matthew Feickert (Project Name is work in progress: DFGMark?)
 
-[![license](https://img.shields.io/github/license/matthewfeickert/fellowship-project.svg)]() [![nbviewer](https://img.shields.io/badge/view%20on-nbviewer-brightgreen.svg)](http://nbviewer.jupyter.org/github/matthewfeickert/fellowship-project/tree/master/Notebooks/)
+[![license](https://img.shields.io/github/license/matthewfeickert/fellowship-project.svg)]() [![nbviewer](https://img.shields.io/badge/view%20on-nbviewer-brightgreen.svg)](http://nbviewer.jupyter.org/github/matthewfeickert/fellowship-project/tree/master/Notebooks/) [![SWAN](http://swanserver.web.cern.ch/swanserver/images/badge_swan_white_150.png)](https://swan002.cern.ch/?projurl=https://github.com/matthewfeickert/fellowship-project.git)
 
 There are examples of how to use the tool in the form of Jupyter notebooks in the `Notebooks` directory.
 
@@ -22,7 +22,8 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
 - **June 5th through June 18th**
 
-  - [ ] Conclude from study of data flow graph frameworks or of probabilistic programming frameworks which framework to pursue.
+  - [x] Conclude from study of data flow graph frameworks or of probabilistic programming frameworks which framework to pursue.
+    - Using `TensorFlow`
   - [ ] Begin implementation of the benchmark models in the selected framework.
   - [ ] Begin to write technical report.
 
