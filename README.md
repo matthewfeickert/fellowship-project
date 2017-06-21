@@ -17,17 +17,17 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
   - [ ] Establish a precise mathematical formulation that is implementation-independent based on the `HistFactory` schema.
   - [x] Begin study of data flow graph frameworks or of probabilistic programming frameworks.
-    - Studying `TensorFlow`
+    - Studying `TensorFlow` and `Edward`
   - [ ] Implement the template for the benchmark models with a `HistFactory` script.
 
-- **June 5th through June 18th**
+- June 5th through June 18th
 
   - [x] Conclude from study of data flow graph frameworks or of probabilistic programming frameworks which framework to pursue.
-    - Using `TensorFlow`
+    - Using [`Edward`](http://edwardlib.org/)
   - [ ] Begin implementation of the benchmark models in the selected framework.
   - [ ] Begin to write technical report.
 
-- June 19th through July 2nd
+- **June 19th through July 2nd**
 
   - [ ] Finish implementation of the benchmark models in the selected framework.
   - [ ] Apply benchmarks evaluating framework data and model parallelism.
@@ -54,7 +54,7 @@ This work is supported by the [DIANA/HEP project](http://diana-hep.org/), which 
 
   - [Gilles Louppe](https://glouppe.github.io/): Project mentor and collaborator
   - [Vince Croft](https://www.nikhef.nl/~vcroft/): Project mentor and collaborator
-  - [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html): Project advisor
+  - [Kyle Cranmer](http://as.nyu.edu/faculty/kyle-s-cranmer.html.html): Project advisor
   - [Stephen Sekula](http://www.physics.smu.edu/sekula/): Matthew's research advisor
 
 - Many thanks to [Lukas Heinrich](https://github.com/lukasheinrich) for insightful discussions.
