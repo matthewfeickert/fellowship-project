@@ -49,6 +49,7 @@ def make_sample(sample_name="sample", sample_histogram=None, uncertainty_down=No
         sample (HistFactory.Sample()): The constructed sample. Ex: signal sample, background sample
     """
     sample = ROOT.RooStats.HistFactory.Sample(sample_name)
+    ROOT.SetOwnership(sample, False)
     sample.SetNormalizeByTheory(has_theory_norm)
     sample.SetHisto(sample_histogram)
     #
@@ -82,6 +83,7 @@ def make_channel(channel_name="channel", channel_data=None, channel_samples=None
         channel (HistFactor.Channel()): The channel object
     """
     channel = ROOT.RooStats.HistFactory.Channel(channel_name)
+    ROOT.SetOwnership(channel, False)
     channel.SetData(channel_data)
     channel.SetStatErrorConfig(0.05, "Poisson")
     if channel_samples:
@@ -110,6 +112,7 @@ def make_model(n_evnets, n_bins, channels, POI, workspace_name=None, workspace_s
     """
     measurement = ROOT.RooStats.HistFactory.Measurement(
         "measurement", "measurement")
+    ROOT.SetOwnership(measurement, False)
     for parameter in POI:
         measurement.SetPOI(parameter)
     # Set luminosity (arbitrary choices for now, which can be set later once
