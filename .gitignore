@@ -25,11 +25,10 @@ __pycache__
 \#*#
 .#*
 .coverage
-src
+#src
 
 *.swp
 *.map
 .idea/
 Read the Docs
 config.rst
-
