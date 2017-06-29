@@ -210,7 +210,40 @@ def benchmark_fit_with_workspace(work_space, model, n_events, n_trials, verbose=
     return benchmark_fit(observable, model, n_events, n_trials, verbose)
 
 
+def roodataset_to_hist(name, x, data, verbose=False):
+    """
+    Histogram a RooDataSet object
+
+    Args:
+        name (str): The name of the resultant histogram
+        x (ROOT.RooRealVar): The variable on the x-axis of the histogram
+        data (ROOT.RooDataSet): The data set to be histogramed
+        verbose (bool):
+            True: Print out information on the RooDataHist
+            False: Don't print out information
+
+    Returns:
+        hist (TH1): The histogram made from the RooDataSet
+    """
+    roo_data_hist = ROOT.RooDataHist(name, "", ROOT.RooArgSet(x), data)
+    if verbose:
+        roo_data_hist.Print("v")
+    hist = roo_data_hist.createHistogram(name, x)
+    hist.Sumw2(False)
+    hist.Sumw2()
+    hist.SetMinimum(0)
+    hist.SetMaximum(hist.GetBinContent(hist.GetMaximumBin()) * 1.1)
+    return hist
+
+
 def main():
+    import sys
+    import os
+    # Don't require pip install to test out
+    #sys.path.append(os.getcwd() + '/../src')
+    sys.path.append(os.getcwd() + '/../')
+    from dfgmark import histfactorybench as hfbench
+
     n_events = 1000
     n_bins = 1
     range_low = 0
@@ -256,16 +289,8 @@ def main():
 
     roo_data_hist = ROOT.RooDataHist("h_data", "h_data", ROOT.RooArgSet(
         ws.var("obs_x_SR")), ws.data("obsData"))
-    h_data = roo_data_hist.createHistogram("h_data", ws.var("obs_x_SR"))
-    h_data.Sumw2(False)
-    h_data.Sumw2()
-    h_data.SetMinimum(0)
-    h_data.SetMaximum(h_data.GetBinContent(1) * 1.1)
-
-    print(roo_data_hist)
-    print(h_data)
-
-    roo_data_hist.Print("v")
+    h_data = hfbench.roodataset_to_hist(
+        "h_data", ws.var("obs_x_SR"), ws.data("obsData"), verbose=True)
 
     c.cd()
     h_data.Draw("E")
