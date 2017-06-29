@@ -175,7 +175,11 @@ def benchmark_fit(var, model, n_events, n_trials, verbose=False):
     start_time = time.time()
     for _ in itertools.repeat(None, n_trials):
         data = model.generate(arg_set, n_events)
-        model.fitTo(data, ROOT.RooFit.Save(False), ROOT.RooFit.PrintLevel(-1))
+        if (n_trials == 1 and verbose):
+            model.fitTo(data, ROOT.RooFit.Save(False))
+        else:
+            model.fitTo(data, ROOT.RooFit.Save(False),
+                        ROOT.RooFit.PrintLevel(-1))
     end_time = time.time()
     time_duration = end_time - start_time
     mean_fit_time = time_duration / n_trials
