@@ -53,13 +53,13 @@ def make_sample(sample_name="sample", sample_histogram=None, uncertainty_down=No
     sample.SetNormalizeByTheory(has_theory_norm)
     sample.SetHisto(sample_histogram)
     #
-    sample.AddNormFactor("SigXsecOverSM", 1, 0, 3)
+    sample.AddNormFactor("SignalStrength", 1, 0, 3)
     # Add normalisation systematic uncertainty
-    if uncertainty_down and uncertainty_up:
+    if (uncertainty_down and uncertainty_up):
         sample.AddOverallSys(sample_name + "_uncertainty",
                              1.0 - uncertainty_down, 1.0 + uncertainty_up)
     # Add signal shape systematic uncertainty
-    if shape_up_hist and shape_down_hist:
+    if (shape_up_hist and shape_down_hist):
         shape_systematic = ROOT.RooStats.HistFactory.HistoSys(
             sample_name + "_shape_sys")
         shape_systematic.SetHistoHigh(shape_up_hist)
@@ -124,7 +124,8 @@ def make_model(n_evnets, n_bins, channels, POI, workspace_name=None, workspace_s
     for channel in channels:
         measurement.AddChannel(channel)
     # make the factory
-    factory = ROOT.RooStats.HistFactory.HistoToWorkspaceFactoryFast()
+    factory = ROOT.RooStats.HistFactory.HistoToWorkspaceFactoryFast(
+        measurement)
     if len(channels) == 1:
         workspace = factory.MakeSingleChannelModel(measurement, channels[0])
     else:
@@ -277,7 +278,7 @@ def main():
                       channel_data=data_hist, channel_samples=samples)
     channels.append(SR)
 
-    POI = ["SigXsecOverSM"]
+    POI = ["SignalStrength"]
     ws, model = make_model(n_events, n_bins, channels, POI)
 
     benchmark_fit(ws.var("obs_x_SR"), model, n_events, n_events, verbose=True)
