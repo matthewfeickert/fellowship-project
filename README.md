@@ -9,7 +9,8 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 - May 8th through May 21st
 
   - [x] Create a GitHub repository for the project.
-  - [ ] Design a template for binned models that is parametrized in terms of number of events, number of bins, number of channels, number of signal/background components, and number of parameters of interest and nuisance parameters.
+  - [x] Design a template for binned models that is parametrized in terms of number of events, number of bins, number of channels, number of signal/background components, and number of parameters of interest and nuisance parameters.
+    - See `histfactorybench.py` module
   - [x] Begin documentation of the template model on the GitHub repository.
     - See `Notebooks` directory
 
@@ -17,8 +18,8 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
   - [ ] Establish a precise mathematical formulation that is implementation-independent based on the `HistFactory` schema.
   - [x] Begin study of data flow graph frameworks or of probabilistic programming frameworks.
-    - Studying `TensorFlow` and `Edward`
-  - [ ] Implement the template for the benchmark models with a `HistFactory` script.
+    - Studying [`TensorFlow`](https://www.tensorflow.org/) and [`Edward`](http://edwardlib.org/)
+  - [x] Implement the template for the benchmark models with a `HistFactory` script.
 
 - June 5th through June 18th
 
@@ -27,12 +28,12 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
   - [ ] Begin implementation of the benchmark models in the selected framework.
   - [ ] Begin to write technical report.
 
-- **June 19th through July 2nd**
+- June 19th through July 2nd
 
   - [ ] Finish implementation of the benchmark models in the selected framework.
   - [ ] Apply benchmarks evaluating framework data and model parallelism.
 
-- July 3rd through July 16th
+- **July 3rd through July 16th**
 
   - [ ] Finish technical report.
   - [ ] Create tutorial on data flow graphs targeted for physicists.
