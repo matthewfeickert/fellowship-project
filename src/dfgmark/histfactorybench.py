@@ -177,7 +177,7 @@ def benchmark_fit(var, model, n_events, n_trials, verbose=False):
     for _ in itertools.repeat(None, n_trials):
         data = model.generate(arg_set, n_events)
         if (n_trials == 1 and verbose):
-            model.fitTo(data, ROOT.RooFit.Save(False))
+            model.fitTo(data, ROOT.RooFit.Save(True))
         else:
             model.fitTo(data, ROOT.RooFit.Save(False),
                         ROOT.RooFit.PrintLevel(-1))
