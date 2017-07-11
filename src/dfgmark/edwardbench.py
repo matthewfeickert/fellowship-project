@@ -32,11 +32,11 @@ def fit_model(model, observations, POI, fit_type='mle'):
     Args:
         model (ed.models class): An Edward model
         observations (np.ndarray): Data to fit the model to
-        POI (list): Parameters of interest to return fit results on
+        POI (dict): Parameters of interest to return fit results on
         fit_type (str): The minimization technique used
 
     Returns:
-        fit_result (list): An list of the fitted model parameters of interest
+        fit_result (dict): A dict of the fitted model parameters of interest
     """
     # observations is an ndarray of (n_observations, d_features)
     # model and data (obsevations) need to have the same size
@@ -55,9 +55,9 @@ def fit_model(model, observations, POI, fit_type='mle'):
 
     sess = ed.get_session()
 
-    fit_result = []
+    fit_result = {}
     for poi in POI:
-        fit_result.append(sess.run(poi))
+        fit_result[poi] = sess.run(POI[poi])
     return fit_result
 
 
@@ -86,7 +86,8 @@ def main():
 
     model, samples = edbench.sample_model(model_template, N)
 
-    POI = [mean1, mean2]
+    POI = {'mean1': mean1,
+           'mean2': mean2}
     fit_result = edbench.fit_model(model, samples, POI)
     print(fit_result)
 
