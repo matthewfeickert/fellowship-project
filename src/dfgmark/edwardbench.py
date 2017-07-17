@@ -6,6 +6,35 @@ from edward.models import Normal
 from edward.models import Categorical, Mixture
 
 
+def make_channel(members):
+    """
+    Create the equivalent of a HistFactory Channel(). This is a composite model of p.d.f.s
+    whose fractional weights sum to unity.
+
+    Args:
+        members (dict of ed.models): The p.d.f.s that will comprise the channel model
+        along with their relative fractional weights. The dict should have elements of
+            {'pdf_name':[fractional_weight, pdf]}
+
+    Returns:
+        channel (ed.models.Mixture): The resulting mixture model from the weighted
+        combinations of the members
+    """
+    fracs = [v[0] for v in members.values()]
+    assert 1. == sum(fracs),\
+        "The sum of the p.d.f. samples fractional weights must be unity.\n\
+    1 != {0}".format(sum(fracs))
+
+    from edward.models import Categorical, Mixture
+
+    cat = Categorical(probs=fracs)
+    components = [v[1] for v in members.values()]
+
+    channel = Mixture(cat=cat, components=components)
+
+    return channel
+
+
 def sample_model(model_template, n_samples):
     """
     Make n_sample observations of an Edward model
