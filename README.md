@@ -25,20 +25,20 @@ There are examples of how to use the tool in the form of Jupyter notebooks in th
 
   - [x] Conclude from study of data flow graph frameworks or of probabilistic programming frameworks which framework to pursue.
     - Using [`Edward`](http://edwardlib.org/)
-  - [ ] Begin implementation of the benchmark models in the selected framework.
-  - [ ] Begin to write technical report.
+  - [x] Begin implementation of the benchmark models in the selected framework.
+  - [x] Begin to write technical report.
 
 - June 19th through July 2nd
 
   - [ ] Finish implementation of the benchmark models in the selected framework.
   - [ ] Apply benchmarks evaluating framework data and model parallelism.
 
-- **July 3rd through July 16th**
+- July 3rd through July 16th
 
   - [ ] Finish technical report.
   - [ ] Create tutorial on data flow graphs targeted for physicists.
 
-- July 17th through August 8th
+- **July 17th through August 8th**
 
   - [ ] Upstream software contributions to address the identified limitations (if any).
   - [ ] Development of/Contribution to a probabilistic framework (if time permits).
