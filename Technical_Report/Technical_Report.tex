@@ -1,0 +1,51 @@
+\documentclass[12pt,letterpaper]{article}
+
+\input{src/preamble}
+
+\title{A study of data flow graph frameworks for statistical models in particle physics}
+\author[1]{\small{Matthew Feickert}}
+\author[2]{Vince Croft}
+\author[2]{Gilles Louppe}
+\author[2]{Kyle Cranmer}
+\affil[1]{\small{Southern Methodist University}}
+\affil[2]{New York University}
+
+\renewcommand\Authands{, and }
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% make the title area
+\maketitle
+\begin{abstract}
+ \input{src/abstract}
+\end{abstract}
+% \end{titlepage}
+\clearpage
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\clearpage
+
+\input{src/introduction}
+
+\input{src/statistics}
+
+\clearpage
+\input{src/acknowledgments}
+
+\clearpage
+\flushbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{bib/uiuchept}
+\bibliographystyle{bib/JHEP}
+\bibliography{bib/DIANA_Feickert}
+
+\end{document}

@@ -1,0 +1,32 @@
+\usepackage[hmargin=1.0in,vmargin=1.0in]{geometry}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{amsmath}    % For math
+\usepackage{amssymb}    % For more math
+\usepackage{mathrsfs}
+\usepackage{subfigure}
+\usepackage{cite}
+\usepackage{lineno}     % allows for line numbering during editing
+\usepackage{authblk}	% allows for multiple authors
+
+\usepackage[usenames,dvipsnames]{xcolor}	% For colors and names for color boxed links
+\usepackage[]{hyperref}           		% For hyperlinks and indexing the PDF
+\hypersetup{
+ colorlinks=false,		% Surround the links by color frames (false) or colors the text of the links (true)
+ citecolor=blue,		% Color of citation links
+ filecolor=black,		% Color of file links
+ linkcolor=red,		% Color of internal links (sections, pages, etc.)
+ urlcolor=black,		% Color of url hyperlinks
+ linkbordercolor=red, 	% Color of links to bibliography
+ citebordercolor=blue,	% Color of file links
+ urlbordercolor=blue	% Color of external links
+}
+
+%% fonts
+%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand\vec[1]{\ensuremath\boldsymbol{#1}} % Makes vectors boldface type, replaces arrows.
+\providecommand{\code}[1]{\texttt{#1}}
+
+\providecommand{\parenth}[1]{\ensuremath\left({#1}\right)}
+\providecommand{\parenthsqr}[1]{\ensuremath\left[{#1}\right]}
+\providecommand{\parenthcurl}[1]{\ensuremath\left\{{#1}\right\}}

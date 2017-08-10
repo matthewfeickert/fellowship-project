@@ -1,0 +1,44 @@
+\section{Statistical Model}
+
+\subsection{Introduction to Channels}
+
+In particle physics searches the range of parameters of interest are broken into different regions for consideration.~\cite{Cranmer:2015nia,Baak:2014wma}
+For example, the region of phase space where the signal for a search is most likely to be observed is referred to as a signal region (SR).
+While regions of phase space which are signal free and the background processes are well modeled are referred to as control regions (CR).
+In the parlance of \texttt{HistFactory} these regions are called ``channels.''~\cite{Cranmer:2012sba}\\
+
+A channel consists of a statistical model of the signal and background components.
+Each component, or ``sample'', is a p.d.f. for a specific process (signal or background).
+\[
+ f_i\parenth{x | \vec{\theta}}
+\]
+Each bin of the channel can then be modeled as a mixture model of the samples
+\[
+ \sum_i w_i f_i, \qquad \sum_i w_i = 1
+\]
+and each bin (with model and data) is Poisson distributed according to the data and model
+\[
+ \text{Poisson}\parenth{\text{bin data} \left|\frac{\mu S f_s + B_b f_b}{\mu S + B_b}\right.}
+\]
+
+\begin{figure}[htpb]
+ \center%
+ \includegraphics[width=0.3\linewidth]{example_channel.pdf}
+ \caption{An example of a channel.
+  The channel contains binned data (crosses) and a binned model (histogram).
+  The model is a product over the bins where each bin is Poisson distributed according to the data given a mixture model of the individual p.d.f.s.}\label{fig:example_channel}
+\end{figure}
+
+\subsection{Model Template}
+
+The statistical model of interest~\cite{Cranmer:2012sba} can be represented as the product over bins
+\begin{equation}
+ \mathcal{P}\parenth{n_{cb}, a_p | \phi_p, \alpha_p, \gamma_b} = \parenth{\,\prod_{c\, \in \text{channels}} \,\prod_{b \in \text{bins}} \text{Pois}\parenth{n_{cb} | \nu_{cb}}} \cdot G\parenth{L_0 | \lambda, \Delta_L} \cdot \prod_{p \in S + \Gamma} f_p \parenth{a_p | \alpha_p}
+ \label{eq:model}
+\end{equation}
+
+
+\begin{equation}
+ \nu_{cb}\parenth{\phi_p, \alpha_p, \gamma_b} = \lambda_{cs} \gamma_{cb}\, \phi_{cs}\parenth{\vec{\alpha}} \eta_{cs} \parenth{\vec{\alpha}} \sigma_{csb} \parenth{\vec{\alpha}}
+ \label{eq:mean_number_events}
+\end{equation}
